@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+    <ul>
+        {% for task in tasks %}
+            <li> {{ task.foooorm }} </li>
+        {% endfor %}
+    </ul>
+    <form method="POST">
+        {% csrf_token %}
+        {{ start}}
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
+
